@@ -1,0 +1,15 @@
+services:
+
+  app:
+    build: .
+    container_name: visitor-app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7
+    container_name: visitor-redis
+    ports:
+      - "6379:6379"
