@@ -32,3 +32,6 @@ jobs:
         env:
           REDIS_HOST: localhost
         run: pytest
+
+      - name: Build Docker image
+        run: docker build -t visitor-counter .
